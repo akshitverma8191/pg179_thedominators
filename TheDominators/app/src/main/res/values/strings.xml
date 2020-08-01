@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GHaT</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="explore">Explore</string>
+    <string name="topSearches">Top Searches</string>
+    <string name="favorites">Favourites</string>
+    <string name="news">Articles</string>
+    <string name="gallery">Gallery</string>
+    <string name="filter">Filters</string>
+    <string name="rivers">Rivers</string>
+</resources>

@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomFragment">
+    android:padding="20dp"
+    android:background="#7AB4E3">
 
-    <TextView
+        <Button
+        android:id="@+id/btn_top"
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="To Be Designed"
-        android:textSize="40dp"
-        android:layout_centerInParent="true"
-        android:textAlignment="center"/>
+        android:elevation="10dp"
+        android:text="Top Searches"
+        android:textAllCaps="false"
+        android:background="@color/cardview_light_background"/>
 
+        <Button
+        android:id="@+id/btn_gal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btn_top"
+        android:elevation="10dp"
+        android:text="Photos Gallery"
+        android:textAllCaps="false"
+        android:background="#ffffff"/>
+
+        <Button
+        android:id="@+id/btn_river"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btn_gal"
+        android:elevation="10dp"
+        android:text="Rivers"
+        android:textAllCaps="false"
+        android:background="@color/cardview_light_background"/>
+
+        <Button
+        android:id="@+id/btn_ghats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btn_river"
+        android:elevation="10dp"
+        android:text="Ghats"
+        android:textAllCaps="false"
+        android:background="@color/cardview_light_background"/>
+
+        <Button
+        android:id="@+id/btn_last"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btn_ghats"
+        android:elevation="10dp"
+        android:text="Top "
+        android:textAllCaps="false"
+        android:background="@color/cardview_light_background"/>
+    
 </RelativeLayout>

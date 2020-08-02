@@ -8,10 +8,9 @@ import json
 
 #Enter json file of your code here
 
-file_json_location = input("Enter Directory of Json File")
 
 #Data fetch
-file_data = open(file_json_location,'r')
+file_data = open('/root/ghatsih/thedominators-f48f2-export.json','r')
 
 #Data conversion to json format
 string_of_data = ''
@@ -41,7 +40,19 @@ for user in users_list:
 		user_neutral.append(user)    
 
 
+
+if len(user_positive) == 0:
+	user_positive.append('null')
+if len(user_negetive) == 0:
+	user_positive.append('null')
+if len(user_neutral) == 0:
+	user_positive.append('null')
+
 	
 final_dict = {'Valid_Users_Data':user_positive,'Invalid_users_Data':user_negetive,'Data_unidentified':user_neutral}
 print(final_dict)
+st = 'Users with positive comment = ' + str(final_dict['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict['Invalid_users_Data']) + '\n' + 'User with neutral comments = ' + str(final_dict['Data_unidentified'])
+
+file2 = open('/root/ghatsih/outpu.txt','w')
+file2.write(st)
 

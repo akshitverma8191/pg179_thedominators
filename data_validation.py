@@ -51,7 +51,7 @@ if len(user_neutral) == 0:
 	
 final_dict = {'Valid_Users_Data':user_positive,'Invalid_users_Data':user_negetive,'Data_unidentified':user_neutral}
 print(final_dict)
-st = 'Users with positive comment = ' + str(final_dict['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict['Invalid_users_Data']) + '\n' + 'User with neutral comments = ' + str(final_dict['Data_unidentified']) + "\n\n"
+st = '\n\n' + 'Users with positive comment = ' + str(final_dict['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict['Invalid_users_Data']) + '\n' + 'User with neutral comments = ' + str(final_dict['Data_unidentified']) + "\n\n"
 
 file2 = open('/root/ghatsih/outpu.txt','w')
 file2.write(st)

@@ -55,6 +55,6 @@ st = 'Users with positive comment = ' + str(final_dict['Valid_Users_Data']) + "\
 
 file2 = open('/root/ghatsih/outpu.txt','w')
 file2.write(st)
-file3 = open('/var/www/html/index.html', 'w')
-file3.write(st)
+#file3 = open('/var/www/html/index.html', 'w')
+#file3.write(st)
 

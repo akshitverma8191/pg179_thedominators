@@ -23,35 +23,92 @@ dict_of_data = json.loads(string_of_data)
 users_list = list(dict_of_data['Uploaded Data'].keys())
 
 #initialising comments analysis list
-user_positive = []
-user_negetive = []
-user_neutral = []
+user_positive_ghat = []
+user_negetive_ghat = []
+user_neutral_ghat = []
+
+user_positive_riverfront = []
+user_negetive_riverfront = []
+user_neutral_riverfront = []
+
+user_positive_crematory = []
+user_negetive_crematory = []
+user_neutral_crematory = []
+
 
 
 for user in users_list:
 	text = dict_of_data['Uploaded Data'][user]['about']
 	obj = TextBlob(text)
-	sentiment = obj.sentiment.polarity
-	if sentiment > 0:
-		user_positive.append(user)
-	elif sentiment < 0:
-		user_negetive.append(user)
-	else:
-		user_neutral.append(user)    
+	#Code for ghat
+	if dict_of_data['Uploaded Data'][user]['type'] == 'Ghat':
+		
+		sentiment = obj.sentiment.polarity
+		if sentiment > 0:
+			user_positive_ghat.append(user)
+		elif sentiment < 0:
+			user_negetive_ghat.append(user)
+		else:
+			user_neutral_ghat.append(user)
+
+	if dict_of_data['Uploaded Data'][user]['type'] == 'Riverfront':
+
+		sentiment = obj.sentiment.polarity
+		if sentiment > 0:
+			user_positive_riverfront.append(user)
+		elif sentiment < 0:
+			user_negetive_riverfront.append(user)
+		else:
+			user_neutral_riverfront.append(user)
+	
+	if dict_of_data['Uploaded Data'][user]['type'] == "Crematory":
+		entiment = obj.sentiment.polarity
+		if sentiment < 0:
+			user_positive_crematory.append(user)
+		elif sentiment > 0:
+			user_negetive_riverfront_crematory.append(user)
+		else:
+			user_neutral_riverfront_crematory.append(user)		   
+	
+	
 
 
 
-if len(user_positive) == 0:
-	user_positive.append('null')
-if len(user_negetive) == 0:
-	user_positive.append('null')
-if len(user_neutral) == 0:
-	user_positive.append('null')
+
+if len(user_positive_ghat) == 0:
+	user_positive_ghat.append('null')
+if len(user_negetive_ghat) == 0:
+	user_positive_ghat.append('null')
+if len(user_neutral_ghat) == 0:
+	user_positive_ghat.append('null')
+
+
+if len(user_positive_riverfront) == 0:
+	user_positive_riverfront.append('null')
+if len(user_negetive_riverfront) == 0:
+	user_positive_riverfront.append('null')
+if len(user_neutral_riverfront) == 0:
+	user_positive_riverfront.append('null')
+
+if len(user_positive_crematory) == 0:
+	user_positive_crematory.append('null')
+if len(user_negetive_crematory) == 0:
+	user_positive_crematory.append('null')
+if len(user_neutral_crematory) == 0:
+	user_positive_crematory.append('null')
 
 	
-final_dict = {'Valid_Users_Data':user_positive,'Invalid_users_Data':user_negetive,'Data_unidentified':user_neutral}
+final_dict = {'Valid_Users_Data':user_positive_ghat,'Invalid_users_Data':user_negetive_ghat,'Data_unidentified':user_neutral_ghat}
+final_dict2 = {'Valid_Users_Data':user_positive_riverfront,'Invalid_users_Data':user_negetive_riverfront,'Data_unidentified':user_neutral_riverfront}
+final_dict3 = {'Valid_Users_Data':user_negetive_crematory,'Invalid_users_Data':user_positive_crematory,'Data_unidentified':user_neutral_crematory}
 print(final_dict)
-st = '-'+"\n"+'Data Classified'+"\n\n" + 'Users with positive comment = ' + str(final_dict['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict['Invalid_users_Data']) + "\n" + 'User with neutral comments = ' + str(final_dict['Data_unidentified']) + "\n\n"
+print('success')
+st1 = '-'+"\n"+'Data Classified'+"\n\n" + 'Users with positive comment = ' + str(final_dict['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict['Invalid_users_Data']) + "\n" + 'User with neutral comments = ' + str(final_dict['Data_unidentified']) + "\n\n"
+st2 = '-'+"\n"+'Data Classified'+"\n\n" + 'Users with positive comment = ' + str(final_dict2['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict2['Invalid_users_Data']) + "\n" + 'User with neutral comments = ' + str(final_dict2['Data_unidentified']) + "\n\n"
+st3 = '-'+"\n"+'Data Classified'+"\n\n" + 'Users with positive comment = ' + str(final_dict3['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict3['Invalid_users_Data']) + "\n" + 'User with neutral comments = ' + str(final_dict3['Data_unidentified']) + "\n\n"
+
+
+st = "Ghats - data"+st1+ "\n"+ "Rvierfront Data" + st2 + "\n" + "Crematory Data"+st3
 
 file2 = open('/root/ghatsih/outpu.txt','w')
 file2.write(st)

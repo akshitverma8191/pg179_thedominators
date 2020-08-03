@@ -103,12 +103,12 @@ final_dict2 = {'Valid_Users_Data':user_positive_riverfront,'Invalid_users_Data':
 final_dict3 = {'Valid_Users_Data':user_negetive_crematory,'Invalid_users_Data':user_positive_crematory,'Data_unidentified':user_neutral_crematory}
 print(final_dict)
 print('success')
-st1 = '-'+"\n"+'Data Classified'+"\n\n" + 'Users with positive comment = ' + str(final_dict['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict['Invalid_users_Data']) + "\n" + 'User with neutral comments = ' + str(final_dict['Data_unidentified']) + "\n\n"
-st2 = '-'+"\n"+'Data Classified'+"\n\n" + 'Users with positive comment = ' + str(final_dict2['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict2['Invalid_users_Data']) + "\n" + 'User with neutral comments = ' + str(final_dict2['Data_unidentified']) + "\n\n"
-st3 = '-'+"\n"+'Data Classified'+"\n\n" + 'Users with positive comment = ' + str(final_dict3['Valid_Users_Data']) + "\n" + 'User with negetive comments =' + str(final_dict3['Invalid_users_Data']) + "\n" + 'User with neutral comments = ' + str(final_dict3['Data_unidentified']) + "\n\n"
+st1 = '-'+"\n"+'Data Classified'+"</br>\n" + 'Users with positive comment = ' + str(final_dict['Valid_Users_Data']) + "</br>\n" + 'User with negetive comments =' + str(final_dict['Invalid_users_Data']) + "</br>\n" + 'User with neutral comments = ' + str(final_dict['Data_unidentified']) + "</br>\n\n"
+st2 = '-'+"</br>\n"+'Data Classified'+"</br>\n\n" + 'Users with positive comment = ' + str(final_dict2['Valid_Users_Data']) + "</br>\n" + 'User with negetive comments =' + str(final_dict2['Invalid_users_Data']) + "</br>\n" + 'User with neutral comments = ' + str(final_dict2['Data_unidentified']) + "</br>\n\n"
+st3 = '-'+"</br>\n"+'Data Classified'+"</br>\n\n" + 'Users with positive comment = ' + str(final_dict3['Valid_Users_Data']) + "</br>\n" + 'User with negetive comments =' + str(final_dict3['Invalid_users_Data']) + "</br>\n" + 'User with neutral comments = ' + str(final_dict3['Data_unidentified']) + "</br>\n\n"
 
 
-st = "Ghats - data"+st1+ "\n"+ "Rvierfront Data" + st2 + "\n" + "Crematory Data"+st3
+st = "<head>" + "<body>" +"Ghats - data"+st1+ "\n"+ "Rvierfront Data" + st2 + "\n" + "Crematory Data"+st3+ <"/body"> +"</head>"
 
 file2 = open('/root/ghatsih/outpu.txt','w')
 file2.write(st)

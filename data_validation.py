@@ -108,7 +108,7 @@ st2 = '-'+"</br>\n"+'Data Classified'+"</br>\n\n" + 'Users with positive comment
 st3 = '-'+"</br>\n"+'Data Classified'+"</br>\n\n" + 'Users with positive comment = ' + str(final_dict3['Valid_Users_Data']) + "</br>\n" + 'User with negetive comments =' + str(final_dict3['Invalid_users_Data']) + "</br>\n" + 'User with neutral comments = ' + str(final_dict3['Data_unidentified']) + "</br>\n\n"
 
 
-st = "<head>" + "<body>" +"Ghats - data"+st1+ "\n"+ "Rvierfront Data" + st2 + "\n" + "Crematory Data"+st3+ <"/body"> +"</head>"
+st = "<head>" + "<body>" +"Ghats - data"+st1+ "\n"+ "Rvierfront Data" + st2 + "\n" + "Crematory Data"+st3+ "</body"> +"</head>"
 
 file2 = open('/root/ghatsih/outpu.txt','w')
 file2.write(st)

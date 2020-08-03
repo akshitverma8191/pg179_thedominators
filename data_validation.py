@@ -108,7 +108,7 @@ st2 = '-'+"</br>\n"+'Data Classified'+"</br></br>\n\n" + 'Users with positive co
 st3 = '-'+"</br>\n"+'Data Classified'+"</br></br>\n\n" + 'Users with positive comment = ' + str(final_dict3['Valid_Users_Data']) + "</br>\n" + 'User with negetive comments =' + str(final_dict3['Invalid_users_Data']) + "</br>\n" + 'User with neutral comments = ' + str(final_dict3['Data_unidentified']) + "</br>\n\n"
 
 date_ = subprocess.getoutput("date")
-st = "<head>" + "<body>" +'--------------------------------------------'+"<br>"+str(date_)+"</br></br>"+"New DATA"+"</br>"+"Ghats - data"+st1+ "\n"+ "Rvierfront Data" + st2 + "\n" + "Crematory Data"+st3+"</br>" +"</body>" +"</head>"
+st = "<head>" + "<body>" +'----------------------------------------------'+"<br>"+str(date_)+"</br></br>"+"New DATA"+"</br>"+"Ghats - data"+st1+ "\n"+ "Rvierfront Data" + st2 + "\n" + "Crematory Data"+st3+"</br>" +"</body>" +"</head>"
 
 file2 = open('/root/ghatsih/outpu.txt','w')
 file2.write(st)
